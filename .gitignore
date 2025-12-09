@@ -1,0 +1,4 @@
+depots/
+output/
+!depots/.gitkeep
+!output/.gitkeep

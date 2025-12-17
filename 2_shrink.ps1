@@ -2,11 +2,13 @@
 
 # 377161 - remove steam's installscript.vdf
 Remove-Item -Path ".\depots\377161\latest\installscript.vdf"
+Remove-Item -Path ".\depots\377161\2025\installscript.vdf"
 Remove-Item -Path ".\depots\377161\2024\installscript.vdf"
 Remove-Item -Path ".\depots\377161\2019\installscript.vdf"
 
 # 377161 - remove duplicated / corrupted Meshes file (the good one is in 377163)
 Remove-Item -Path ".\depots\377161\latest\Data\Fallout4 - Meshes.ba2"
+Remove-Item -Path ".\depots\377161\2025\Data\Fallout4 - Meshes.ba2"
 Remove-Item -Path ".\depots\377161\2024\Data\Fallout4 - Meshes.ba2"
 Remove-Item -Path ".\depots\377161\2019\Data\Fallout4 - Meshes.ba2"
 

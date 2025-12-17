@@ -1,3 +1,4 @@
+if (-not (Test-Path -Path '.\output2025')) { New-Item -Path '.\output2025' -ItemType Directory | Out-Null }
 if (-not (Test-Path -Path '.\output2024')) { New-Item -Path '.\output2024' -ItemType Directory | Out-Null }
 if (-not (Test-Path -Path '.\output2019')) { New-Item -Path '.\output2019' -ItemType Directory | Out-Null }
 
@@ -38,6 +39,8 @@ function Compress-Downgrades {
         & 7za a -t7z $outFile $sourcePattern -m0=lzma2 -mx=5
     }
 }
+
+Compress-Downgrades -Year '2025' -Exceptions @()
 
 Compress-Downgrades -Year '2024' -Exceptions @('377163')
 & 7za a -t7z output2024\377163.7z .\depots\377163\downgrade_2024\* -m0=lzma2 -mx=5 -v463m
